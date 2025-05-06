@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Clock Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <span class="time" id="time"></span>
+        <div class="leftText">
+            <h1> ДИЗАЙНЕРСКИЙ ЧАСЫ </h1>
+            <p> ПОЛНОСТЬЮ РУЧНОЕ ИЗГОТОВЛЕНИЕ </p>
+            <button class="buyHeader buttonToChange openModel" data-price="900000"> КУПИТЬ </button>
+            <dialog class="dialogMain">
+                <form class="orderForm">
+                    <h2>Оформление заказа</h2>
+                    
+                    <p class="hidden" id="validSuccess"></p>
+                    <p class="hidden" id="validError"></p>
+
+                    <p><label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Имя" required>
+                    <p class="hidden text-danger" id="nameP"></p></p>
+                    
+                    <p><label for="secondName">Фамилия:</label>
+                    <input type="text" id="secondName" name="secondName" placeholder="Фамилия" required>
+                    <p class="hidden text-danger" id="secondNameP"></p></p>
+            
+                    <p><label for="thirdName">Отчество:</label>
+                    <input type="text" id="thirdName" name="thirdName" placeholder="Отчество">
+                    <p class="hidden text-danger" id="thirdNameP"></p></p>
+            
+                    <p><label for="address">Адрес доставки:</label>
+                    <input type="text" id="address" name="address" placeholder="Ул. Пушкино, д. 2, кв. 1" required></p>
+            
+                    <p><label for="quantity">Количество:</label>
+                    <input type="number" id="quantity" name="quantity" placeholder="1" min="1" max="10" required></p>
+            
+                    <p><label for="promo">Промокод:</label>
+                    <input type="text" id="promo" placeholder="*Промокод*" name="promo"></p>
+                    
+                    <p class="priceHeader"></p>
+                    <input type="submit" value="Заказать!">
+                </form>
+                <button id="closeModel" class="closeModel">&#x2715 </button>
+            </dialog>
+        </div>
+        <div class="rightText">
+            <p> JACOB & CO <br>EPIC X TOURBILON BAGUETTE <br>900.000$</p>
+            <img src="imgs/mainPhotoWatches.png">
+        </div>
+    </header>
+
+    <main>
+        <div class="textInMain">
+            <p>ХИТЫ</p>
+            <p>ПОСЛЕДНИЕ ПОСТУПЛЕНИЯ</p>
+        </div>
+        <div class="productsList">
+            <div class="productUnit">
+                <img src="imgs/appleulta.png">
+                <p>Apple watch ulta 2</p>
+                <p>700$</p>
+                <button class="buttonUnit buttonToChange openModel" data-price="700"> Купить </button>
+            </div>
+            <div class="productUnit">
+                <img src="imgs/rolexDayDate36.png">
+                <p>Rolex Day-Date 36</p>
+                <p>117.250$</p>
+                <button class="buttonUnit buttonToChange openModel" data-price="117250"> Купить </button>
+            </div>
+            <div class="productUnit">
+                <img src="imgs/KingSeiko.png">
+                <p>King Seiko Automatic</p>
+                <p>2.000$</p>
+                <button class="buttonUnit buttonToChange openModel" data-price="2000"> Купить </button>
+            </div>
+            <div class="productUnit">
+                <img src="imgs/PatekPhilippe.png">
+                <p>Paket Philippe 5270/1R</p>
+                <p>230.000$</p>
+                <button class="buttonUnit buttonToChange openModel" data-price="230000"> Купить </button>
+            </div>
+            <div class="productUnit">
+                <img src="imgs/rolexDateJust31.png">
+                <p>Rolex DateJust 31</p>
+                <p>51.900$</p>
+                <button class="buttonUnit buttonToChange openModel" data-price="51900"> Купить </button>
+            </div>
+            <div class="productUnit">
+                <img src="imgs/PatekPhilippeBlackWhite.png">
+                <p>Patek Philippe 6300/400G</p>
+                <p>9.000.000$</p>
+                <button class="buttonUnit buttonToChange openModel" data-price="9000000"> Купить </button>
+            </div>
+            <div class="productUnit">
+                <img src="imgs/appleseries10.png">
+                <p>Apple watch series 10</p>
+                <p>450$</p>
+                <button class="buttonUnit buttonToChange openModel" data-price="450"> Купить </button>
+            </div>
+            <div class="productUnit">
+                <img src="imgs/Jacob&Co.png">
+                <p>Jacob&Co Palatial Classic</p>
+                <p>16.500$</p>
+                <button class="buttonUnit buttonToChange openModel" data-price="16500"> Купить </button>
+            </div>
+        </div>
+        <div class="addModule">
+            <div class="leftSide">
+                <div class="textInMain addText">
+                    <p>ФУНКЦИИ И РЕКУРСИИ. ВАРИАНТ 12. ЗАДАНИЕ 1</p>
+                </div>
+                <form class="decorateBlock" id="recursiveFunction">
+                    <p><label for="RecursiveValue">Число</label>
+                    <input type="number" required for="RecursiveValue" placeholder="1.." min="1" id="RecursiveValueInput"></p>
+                    <button id="RecursiveCalc"> Вычислить! </button>
+                </form>
+                <p class="MapResult"></p>
+            </div>
+            <div class="rightSide">
+                <div class="textInMain addText">
+                    <p>ЗАМКНУТЫЕ ФУНКЦИИ</p>
+                </div>
+                <form class="decorateBlock">
+                    <p><label for="closedNum">Число</label>
+                    <input type="text" required for="closedNum" placeholder="1.." id="closedNumInput"></p>
+                    <button id="NumWrite"> Прочитать </button>
+                </form>
+                <div class="decorateBlock">
+                    <p><label for="numToOperation">Число</label>
+                    <input type="text" required for="numToOperation" placeholder="1.." id="numToOperationInput"></p>
+                    <button id="multyNum"> Умножить </button>
+                    <button id="summNum"> Сложить </button>
+                    <button id="divideNum"> Разделить </button>
+                    <button id="remainderNum"> Остаток </button>
+                </div>
+                <p class="SETResult"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
