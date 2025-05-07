@@ -146,7 +146,6 @@ input:not([type="submit"]) {
 
 main {
     width: 100%;
-    margin-top: 1.5%;
 }
 .textInMain {
     margin: 0 3%;
@@ -264,43 +263,14 @@ main {
 }
 
 .slider {
-    overflow: hidden;
- }
-.slides {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-.slide {
     width: 100%;
-}
-.slide img {
-    width: 700px;
-    height: auto;
-}
-.sliderButtons{
-    margin: 0.75% 7%;
-}
-.slider button{
-    width: 100px;
-    height: 40px;
+    height: 700px;
     border: 2px solid black;
-    font-size: 25px;
-    padding: 0;
-    overflow-y: hidden;
-}
-.next{
-    margin-left: 80%;
-}
-
-.slider_v2 {
-    width: 45%;
-    height: 500px;
-    border: 2px solid black;
-    margin: 1.5% auto;
+    margin: 0 auto 1%;
     position: relative;
     overflow: hidden;
 }
-.slider_v2 img {
+.slider img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -309,10 +279,10 @@ main {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-.slider_v2 img.active {
+.slider img.active {
     opacity: 1;
 }
-.slider_v2 button {
+.slider button {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -322,9 +292,9 @@ main {
     transform: translateY(-50%);
     z-index: 1;
 }
-.slider_v2 .prev_v2 {
+.slider .prev {
     left: 10px;
 }
-.slider_v2 .next_v2 {
+.slider .next {
     right: 10px;
 }
