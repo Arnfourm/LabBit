@@ -12,13 +12,6 @@ function* randomGenerate(startNumber, countElements){
     };
 };
 
-async function* asyncGenerator(startNumber, countElements){
-    for (let i = startNumber; i <= countElements; i++){
-        let result = Math.round((((startNumber++ + countElements) * 15 + 123) / 9));
-        yield result;
-    };
-};
-
 //Класс продукты
 let productList = [];
 
@@ -89,6 +82,7 @@ class Accessory extends Product {
 }
 
 let productGenerator = simpleGenerate(1, 8);
+
 productList.push(
     new Watch(productGenerator.next().value, "Apple watch ulta 2", 700, "imgs/appleulta.png"), 
     new Watch(productGenerator.next().value, "Rolex Day-Date 36", 117250, "imgs/rolexDayDate36.png"), 
@@ -145,16 +139,13 @@ class Order {
     }
 }
 
-(async () => {
-    let orderGenerator = randomGenerate(1, 3);
-    let orderGeneratorAsync = asyncGenerator(9, 3);
+let orderGenerator = randomGenerate(1, 3);
 
-    orderList.push(
-        new Order(orderGenerator.next().value, "Аноним", "Анонимов", "Anonim@gmail.com", "Город Анонимов, ул. Анонимная, д. Анон, кв. А", await orderGeneratorAsync.next().value), 
-        new Order(orderGenerator.next().value, "Виктор", "Викторов", "ViktorSupet@mail.ru", "Город Москва, улица Мира, д.4", await orderGeneratorAsync.next().value), 
-        new Order(orderGenerator.next().value, "Тестер", "Тестеров", "tester@top.com", "г.Тест, ул. Тестеров, д. -004", await orderGeneratorAsync.next().value)
-    );
-});
+orderList.push(
+    new Order(orderGenerator.next().value, "Аноним", "Анонимов", "Anonim@gmail.com", "Город Анонимов, ул. Анонимная, д. Анон, кв. А", 2), 
+    new Order(orderGenerator.next().value, "Виктор", "Викторов", "ViktorSupet@mail.ru", "Город Москва, улица Мира, д.4", 7), 
+    new Order(orderGenerator.next().value, "Тестер", "Тестеров", "tester@top.com", "г.Тест, ул. Тестеров, д. -004", 5)
+);
 
 
 //Генерация html
