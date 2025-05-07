@@ -1,3 +1,24 @@
+//Генераторы
+function* simpleGenerate(startNumber, countElements) {
+    for (let i = startNumber; i <= countElements; i++){
+        yield startNumber++;
+    };
+};
+
+function* randomGenerate(startNumber, countElements){
+    for (let i = startNumber; i <= countElements; i++){
+        let result = Math.round((((startNumber++ + countElements) * 81 + 412) / 12));
+        yield result;
+    };
+};
+
+async function* asyncGenerator(startNumber, countElements){
+    for (let i = startNumber; i <= countElements; i++){
+        let result = Math.round((((startNumber++ + countElements) * 15 + 123) / 9));
+        yield result;
+    };
+};
+
 //Класс продукты
 let productList = [];
 
@@ -67,24 +88,40 @@ class Accessory extends Product {
     }
 }
 
-productList.push(new Watch(1, "Apple watch ulta 2", 700, "imgs/appleulta.png"), new Watch(2, "Rolex Day-Date 36", 117250, "imgs/rolexDayDate36.png"), new Accessory(3, "118135 RHODIUM", 250, "imgs/RemeshokRolex.png"), new Watch(4, "Paket Philippe 5270/1R", 230000, "imgs/PatekPhilippe.png"), new Accessory(5, "Mademoiselle Prive H3567", 310, "imgs/RemeshokChannel.png"), new Watch(6, "Patek Philippe 6300/400G", 9000000, "imgs/PatekPhilippeBlackWhite.png"), new Watch(7, "Apple watch series 10", 450, "imgs/appleseries10.png"), new Watch(8, "Jacob&Co Palatial Classic", 16500, "imgs/Jacob&Co.png"));
+let productGenerator = simpleGenerate(1, 8);
+productList.push(
+    new Watch(productGenerator.next().value, "Apple watch ulta 2", 700, "imgs/appleulta.png"), 
+    new Watch(productGenerator.next().value, "Rolex Day-Date 36", 117250, "imgs/rolexDayDate36.png"), 
+    new Accessory(productGenerator.next().value, "118135 RHODIUM", 250, "imgs/RemeshokRolex.png"), 
+    new Watch(productGenerator.next().value, "Paket Philippe 5270/1R", 230000, "imgs/PatekPhilippe.png"), 
+    new Accessory(productGenerator.next().value, "Mademoiselle Prive H3567", 310, "imgs/RemeshokChannel.png"), 
+    new Watch(productGenerator.next().value, "Patek Philippe 6300/400G", 9000000, "imgs/PatekPhilippeBlackWhite.png"), 
+    new Watch(productGenerator.next().value, "Apple watch series 10", 450, "imgs/appleseries10.png"), 
+    new Watch(productGenerator.next().value, "Jacob&Co Palatial Classic", 16500, "imgs/Jacob&Co.png")
+);
 
 //Класс заказы
 let orderList = [];
 
 class Order {
+    #id;
     #name;
     #surname;
     #email;
     #address;
     #quantity;
 
-    constructor(name, surname, email, address, quantity) {
+    constructor(id, name, surname, email, address, quantity) {
+        this.#id = id;
         this.#name = name;
         this.#surname = surname;
         this.#email = email;
         this.#address = address;
         this.#quantity = quantity;
+    }
+
+    get getId() {
+        return this.#id;
     }
 
     get getName() {
@@ -108,7 +145,17 @@ class Order {
     }
 }
 
-orderList.push(new Order("Аноним", "Анонимов", "Anonim@gmail.com", "Город Анонимов, ул. Анонимная, д. Анон, кв. А", 2), new Order("Виктор", "Викторов", "ViktorSupet@mail.ru", "Город Москва, улица Мира, д.4", 9), new Order("Тестер", "Тестеров", "tester@top.com", "г.Тест, ул. Тестеров, д. -004", 5));
+(async () => {
+    let orderGenerator = randomGenerate(1, 3);
+    let orderGeneratorAsync = asyncGenerator(9, 3);
+
+    orderList.push(
+        new Order(orderGenerator.next().value, "Аноним", "Анонимов", "Anonim@gmail.com", "Город Анонимов, ул. Анонимная, д. Анон, кв. А", await orderGeneratorAsync.next().value), 
+        new Order(orderGenerator.next().value, "Виктор", "Викторов", "ViktorSupet@mail.ru", "Город Москва, улица Мира, д.4", await orderGeneratorAsync.next().value), 
+        new Order(orderGenerator.next().value, "Тестер", "Тестеров", "tester@top.com", "г.Тест, ул. Тестеров, д. -004", await orderGeneratorAsync.next().value)
+    );
+});
+
 
 //Генерация html
 const productListContainer = document.querySelector(".productsList");
