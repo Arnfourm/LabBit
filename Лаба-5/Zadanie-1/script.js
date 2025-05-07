@@ -187,6 +187,9 @@ productList.forEach((product) => {
 orderList.forEach((order) => {
     const orderUnit = document.createElement("div");
     orderUnit.classList.add("orderRow");
+    
+    const idOrder = document.createElement("p");
+    idOrder.textContent = order.getId;
 
     const nameOrder = document.createElement("p");
     nameOrder.textContent = order.getName;
@@ -203,6 +206,7 @@ orderList.forEach((order) => {
     const quantityOrder = document.createElement("p");
     quantityOrder.textContent = order.getQuantity;
 
+    orderUnit.appendChild(idOrder);
     orderUnit.appendChild(nameOrder);
     orderUnit.appendChild(surnameOrder);
     orderUnit.appendChild(emailOrder);
