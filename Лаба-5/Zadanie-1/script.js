@@ -222,11 +222,11 @@ function openModelScript() {
     dialog.showModal();
     html.classList.add("changehtml");
     priceHeader.textContent = `Цена: ${price.toLocaleString()}$`;
-}
+};
 
 for (let i = 0; i < openModels.length; i++) {
     openModels[i].addEventListener("click", openModelScript);
-}
+};
 
 document.querySelector("#closeModel").addEventListener("click", function () {
     dialog.close();
@@ -238,7 +238,7 @@ addEventListener("keydown", function (event) {
         openModelScript();
     } else if (event.ctrlKey && event.key === "q") {
         window.close();
-    }
+    };
 });
 
 //Изменения цены

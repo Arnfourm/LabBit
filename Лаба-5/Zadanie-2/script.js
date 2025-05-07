@@ -231,7 +231,6 @@ function renderOrders(){
     });
 };
 
-
 // Модальное окно
 const dialog = document.querySelector(".dialogMain");
 const html = document.querySelector("html");
@@ -242,7 +241,7 @@ function openModelScript() {
     dialog.showModal();
     html.classList.add("changehtml");
     priceHeader.textContent = `Цена: ${price.toLocaleString()}$`;
-}
+};
 
 for (let i = 0; i < openModels.length; i++) {
     openModels[i].addEventListener("click", openModelScript);
