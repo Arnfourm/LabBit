@@ -14,7 +14,7 @@ function* randomGenerate(startNumber, countElements){
 
 async function* asyncGenerator(startNumber, countElements){
     for (let i = startNumber; i <= countElements; i++){
-        let result = Math.round((((startNumber++ + countElements) * 15521 + 123) / 9));
+        const result = Math.round((((startNumber++ + countElements) * 15521 + 123) / 9));
         yield result;
     };
 };
@@ -103,9 +103,15 @@ class Accessory extends Product {
         new Watch(productGenerator.next().value, "Jacob&Co Palatial Classic", (await priceGenerator.next()).value, "imgs/Jacob&Co.png")
     );
 
+    let sumGenerator = asyncGenerator(3, 10);
+    let sum = 0;
+    for await (let price of sumGenerator) {
+        sum += price;
+    }
+
+    document.getElementById("toGenerator").textContent += ` (ОБЩАЯ СУММА: ${sum}$)`;
     renderProducts();
 })();
-
 
 //Класс заказы
 let orderList = [];
