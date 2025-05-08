@@ -266,7 +266,7 @@ main {
 }
 
 .jump{
-    animation: jump 0.3s linear;
+    animation: jump 0.5s linear;
 }
 
 @keyframes jump{
