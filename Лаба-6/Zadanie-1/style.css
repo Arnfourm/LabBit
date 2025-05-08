@@ -249,7 +249,7 @@ main {
 }
 
 /* dinoGame */
-.dinoGame{
+#dinoGame{
     width: 90%;
     height: 500px;
     border: 2px solid black;
@@ -312,10 +312,6 @@ main {
     overflow-y: hidden;
 }
 
-.animate{
-    animation: block 2s infinite linear;
-}
-
 @keyframes block{
     0%{
         left: 100%;
@@ -325,10 +321,33 @@ main {
     }
 }
 
-#loseGame {
+.animate{
+    animation-name: block;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#deadGameBlock {
     font-size: 48px;
     color: red;
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
 }
+
+#retryButtonGame{
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.score{
+    position: absolute;
+    font-size: 24px;
+    left: 2%;
+    top: 5%;
+
+ }
