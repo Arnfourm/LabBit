@@ -254,7 +254,9 @@ main {
     height: 500px;
     border: 2px solid black;
     margin: 1% auto;
+    position: relative;
 }
+
 #dino{
     width: 100px;
     height: 100px;
@@ -265,28 +267,36 @@ main {
     margin-left: 1%;
 }
 
-.jump{
-    animation: jump 0.5s linear;
+.jump {
+    animation: jump 0.9s ease-in-out;
 }
 
-@keyframes jump{
-    0%{
+@keyframes jump {
+    0% {
         top: 400px;
     }
-
-    30%{
-        top: 340px;
+    10% {
+        top: 360px;
     }
-
-    50%{
-        top: 190px;
+    25% {
+        top: 280px;
     }
-
-    80%{
-        top: 340px;
+    40% {
+        top: 200px;
     }
-
-    100%{
+    50% {
+        top: 180px;
+    }
+    60% {
+        top: 200px;
+    }
+    75% {
+        top: 280px;
+    }
+    90% {
+        top: 360px;
+    }
+    100% {
         top: 400px;
     }
 }
@@ -296,11 +306,14 @@ main {
     height: 120px;
     position: relative;
     top: 280px;
-    left: 100%;
+    left: 99%;
     background-image: url("./imgs/cactus.png");
     background-size: 50px 120px;
-    animation: block 2s infinite linear;
     overflow-y: hidden;
+}
+
+.animate{
+    animation: block 2s infinite linear;
 }
 
 @keyframes block{
@@ -308,6 +321,14 @@ main {
         left: 100%;
     }
     100%{
-        left: -5%;
+        left: -60px;
     }
+}
+
+#loseGame {
+    font-size: 48px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
 }

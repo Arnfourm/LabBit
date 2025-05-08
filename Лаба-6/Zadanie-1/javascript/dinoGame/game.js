@@ -1,12 +1,17 @@
 const dino = document.getElementById("dino");
+let isDead = false;
 
 function jump(){
+    if (isDead){
+        return;
+    }
+
     if (dino.classList != "jump"){
         dino.classList.add("jump");
 
         setTimeout(function() {
             dino.classList.remove("jump");
-        }, 300);
+        }, 900);
     };
 };
 
@@ -25,6 +30,8 @@ let isAlive = setInterval(function() {
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
     if (cactusLeft < 50 && cactusLeft > 0 && dinoTop > 290){
-        alert("=(");
+        document.getElementById("loseGame").textContent = "Потрачено";
+        cactus.classList.remove("animate");
+        isDead = true;
     };
 }, 10);
