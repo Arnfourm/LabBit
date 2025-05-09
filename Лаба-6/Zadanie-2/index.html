@@ -14,6 +14,13 @@
 
 <body>
     <header>
+        <ul class="list-style">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Observer</a></li>
+            <li><a href="#">Editor</a></li>
+            <li><a href="#">Deleter</a></li>
+        </ul>
+
         <div class="leftText">
             <h1> ДИЗАЙНЕРСКИЙ ЧАСЫ </h1>
             <p> ПОЛНОСТЬЮ РУЧНОЕ ИЗГОТОВЛЕНИЕ </p>
@@ -65,13 +72,23 @@
     </header>
 
     <main>
-
         <div class="slider" id="slider">
             <div class="slide"><img src="imgs/sliderfirst.jpg"></div>
             <div class="slide"><img src="imgs/slidersecond.jpg"></div>
             <div class="slide"><img src="imgs/sliderthird.jpg"></div>
             <button class="prev" id="prev">🠘</button>
             <button class="next" id="next">🠚</button>
+        </div>
+
+        <div id="dinoGame">
+            <div id="dino"></div>
+            <div id="cactus" class="animate"></div>
+            <p class="score"> Score: <span id="scoreToChange">0</span></p>
+            <div id="deadGameBlock" style="visibility: hidden;">
+                <p id="loseGame"> Потрачено </p>
+                <button id="retryButtonGame"> Retry </button>
+            </div>
+
         </div>
 
         <div class="textInMain" onmousedown="return false">
@@ -98,6 +115,7 @@
     <script src="./javascript/entireFunctions/entireFunctions.js" type="module"></script>
     <script src="./javascript/sliders/slider.js"></script>
     <script defer src="./javascript/validation/validation.js"></script>
+    <script defer src="./javascript/dinoGame/game.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+/* Общее */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +18,7 @@ button {
     display: none;
 }
 
+/* Header */
 header {
     background-color: #f2f2f2;
     width: 100%;
@@ -58,6 +60,7 @@ header div {
     background-color: black;
 }
 
+/* Модальное окно */
 .dialogMain {
     margin: auto;
     top: 0;
@@ -144,6 +147,7 @@ input:not([type="submit"]) {
     color: red;
 }
 
+/* Продукты */
 main {
     width: 100%;
 }
@@ -184,6 +188,7 @@ main {
     background-color: black;
 }
 
+/* Заказы */
 .orderContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
@@ -205,63 +210,7 @@ main {
     border-bottom: 1px solid #ccc;
 }
 
-.addModule {
-    display: flex;
-    margin-top: 1.5%;
-    height: 50vh;
-}
-.addModule:nth-child(odd) {
-    background-color: #f2f2f2;
-}
-.addModule > div {
-    width: 50%;
-}
-.addText {
-    margin-top: 1.5%;
-}
-
-.decorateBlock {
-    display: flex;
-    gap: 10px;
-    margin-top: 2%;
-    margin-left: 5%;
-    font-family: "Overpass", sans-serif;
-}
-.decorateBlock label {
-    display: block;
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
-}
-.decorateBlock input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    width: 128px;
-}
-.decorateBlock button{
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 30px;
-    transition: 0.3s ease;
-    width: 150px;
-    height: 50px;
-    border-radius: 8px;
-    font-size: 18px;
-}
-.decorateBlock button:hover {
-    background-color: #333;
-}
-
-.resultDecorate{
-    font-size: 20px;
-    margin: 2% 5%;
-}
-
+/* Slider */
 .slider {
     width: 100%;
     height: 700px;
@@ -297,4 +246,133 @@ main {
 }
 .slider .next {
     right: 10px;
+}
+
+/* dinoGame */
+#dinoGame{
+    width: 90%;
+    height: 500px;
+    border: 2px solid black;
+    margin: 1% auto;
+    position: relative;
+    border-radius: 10px;
+}
+
+#dino{
+    width: 100px;
+    height: 100px;
+    background-image: url("./imgs/dino.png");
+    background-size: 100px;
+    position: relative;
+    top: 400px;
+    margin-left: 1%;
+}
+
+.jump {
+    animation: jump 0.9s ease-in-out;
+}
+
+@keyframes jump {
+    0% {
+        top: 400px;
+    }
+    10% {
+        top: 360px;
+    }
+    25% {
+        top: 280px;
+    }
+    40% {
+        top: 200px;
+    }
+    50% {
+        top: 180px;
+    }
+    60% {
+        top: 200px;
+    }
+    75% {
+        top: 280px;
+    }
+    90% {
+        top: 360px;
+    }
+    100% {
+        top: 400px;
+    }
+}
+
+#cactus{
+    width:50px;
+    height: 120px;
+    position: relative;
+    top: 280px;
+    left: 99%;
+    background-image: url("./imgs/cactus.png");
+    background-size: 50px 120px;
+    overflow-y: hidden;
+}
+
+@keyframes block{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -60px;
+    }
+}
+
+.animate{
+    animation-name: block;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#deadGameBlock {
+    font-size: 48px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#retryButtonGame{
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.score{
+    position: absolute;
+    font-size: 24px;
+    left: 2%;
+    top: 5%;
+
+ }
+
+ /* Меню */
+ .list-style {
+    position: absolute;
+    height: auto;
+    width: 500px;
+    margin: 2% 4%;
+    font-size: 20px;
+    color: #777777;
+}
+.list-style li{
+    display: inline-block;
+    margin: 0% 5%;
+}
+.list-style a{
+    text-decoration: none;
+    color: #777777;
+    cursor: pointer;
+    transition: 1.5s;
+}
+.list-style a:hover{
+    color: #2e2e2e;
+    transition: 1s;
 }
