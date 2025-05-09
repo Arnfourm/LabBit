@@ -15,10 +15,8 @@
 <body>
     <header>
         <ul class="list-style">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Observer</a></li>
-            <li><a href="#">Editor</a></li>
-            <li><a href="#">Deleter</a></li>
+            <li><a href="#">Main</a></li>
+            <li><a href="./game.html">Game</a></li>
         </ul>
 
         <div class="leftText">
@@ -80,17 +78,6 @@
             <button class="next" id="next">🠚</button>
         </div>
 
-        <div id="dinoGame">
-            <div id="dino"></div>
-            <div id="cactus" class="animate"></div>
-            <p class="score"> Score: <span id="scoreToChange">0</span></p>
-            <div id="deadGameBlock" style="visibility: hidden;">
-                <p id="loseGame"> Потрачено </p>
-                <button id="retryButtonGame"> Retry </button>
-            </div>
-
-        </div>
-
         <div class="textInMain" onmousedown="return false">
             <p>ХИТЫ</p>
             <p>ПОСЛЕДНИЕ ПОСТУПЛЕНИЯ</p>
@@ -109,13 +96,21 @@
                 <p>Количество</p>
             </div>
         </div>
+
+        <section>
+            <p> Текущий путь: <span id="currentPathToChange"></span> </p>
+            <p> Сохраненный путь: <span id="savedPathChange"></span></p>
+            <button id="changeSavedPath"> Изменить путь </button>
+            <button id="returnSavedPath"> Вернуться на путь </button>
+        </section>
+
     </main>
 
     <script src="./javascript/render/render.js" type="module"></script>
     <script src="./javascript/entireFunctions/entireFunctions.js" type="module"></script>
+    <script src="./javascript/localStorage/localStorageWork.js"></script>
     <script src="./javascript/sliders/slider.js"></script>
     <script defer src="./javascript/validation/validation.js"></script>
-    <script defer src="./javascript/dinoGame/game.js"></script>
 </body>
 
 </html>

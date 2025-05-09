@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Clock Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul class="list-style">
+        <li><a href="./index.html">Main</a></li>
+        <li><a href="#">Game</a></li>
+    </ul>
+
+    <main style="margin-top: 5%;">
+        <div id="dinoGame">
+            <div id="dino"></div>
+            <div id="cactus" class="animate"></div>
+            <p class="score"> Score: <span id="scoreToChange">0</span></p>
+            <div id="deadGameBlock" style="visibility: hidden;">
+                <p id="loseGame"> Потрачено </p>
+                <button id="retryButtonGame"> Retry </button>
+            </div>
+    </main>
+
+    <section>
+        <p> Текущий путь: <span id="currentPathToChange"></span> </p>
+        <p> Сохраненный путь: <span id="savedPathChange"></span></p>
+        <button id="changeSavedPath"> Изменить путь </button>
+        <button id="returnSavedPath"> Вернуться на путь </button>
+    </section>
+
+    <script src="./javascript/localStorage/localStorageWork.js"></script>
+    <script defer src="./javascript/dinoGame/game.js"></script>
+</body>
+
+</html>
