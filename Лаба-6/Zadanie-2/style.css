@@ -376,3 +376,27 @@ main {
     color: #2e2e2e;
     transition: 1s;
 }
+
+/* Работа с localStorage */
+.localStorageWork{
+    font-size: 20px;
+    margin: 1% 2%;
+}
+
+.localStorageWork > *{
+    margin: 0.25% 0;
+}
+
+.localStorageWork > button{
+    font-size: 18px;
+    padding: 0.5%;
+    border: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 7px;
+    background-color: black;
+}
+
+.localStorageWork > button:last-of-type{
+    margin-left: 0.5%;
+}
