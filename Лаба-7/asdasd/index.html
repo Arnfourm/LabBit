@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJAX</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <h1>Форма для работы с AJAX</h1>
+    <form id="myForm" action="/user" method="post">
+        <p>
+            <label>Введите свое имя</label><br />
+            <input type="text" name="userName" />
+        </p>
+        <p>
+            <label>Введите свой возраст</label><br />
+            <input type="number" name="userAge" />
+        </p>
+        <p>
+            <label>Выберите свою картинку</label><br />
+            <input type="file" name="userImg" />
+        </p>
+        <input type="submit" value="Отправить" />
+    </form>
+    <hr />
+    <div id="response"></div>
+</body>
+
+</html>
