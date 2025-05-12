@@ -20,11 +20,11 @@ const storage = multer.diskStorage({
     filename: function(request, file, cb){
         cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
     }
-});
+}); ``
 
 const upload = multer({storage: storage});
 
-app.post("/postPhoto", upload.single("userImg"), (request, response) => {
+app.post("/postPhoto", upload.single("photoImg"), (request, response) => {
     const data = request.body;
     console.log(request.file);
 
