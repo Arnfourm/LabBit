@@ -6,14 +6,17 @@
     font-family: "Overpass", serif;
     cursor: default;
 }
+
 button {
     cursor: pointer;
 }
+
 .changebackground {
     background-color: #f2f2f2 !important;
     color: black !important;
     box-shadow: 0px 5px 20px 8px rgba(34, 60, 80, 0.17) !important;
 }
+
 .hidden {
     display: none;
 }
@@ -25,6 +28,7 @@ header {
     display: flex;
     height: 100vh;
 }
+
 header div {
     width: 50%;
     display: flex;
@@ -33,23 +37,29 @@ header div {
     justify-content: center;
     text-align: center;
 }
-.leftText > * {
+
+.leftText>* {
     margin: 0.75% 0;
 }
+
 .leftText h1 {
     font-size: 40px;
     font-weight: 700;
 }
+
 .leftText p {
     font-size: 20px;
 }
+
 .rightText img {
     width: 55%;
 }
+
 .rightText p {
     color: #c5c5c5;
     font-weight: 600;
 }
+
 .buyHeader {
     padding: 1.5% 4%;
     text-align: center;
@@ -74,9 +84,11 @@ header div {
     border: none;
     box-shadow: 0px 5px 20px 15px rgba(34, 60, 80, 0.17);
 }
+
 .changehtml {
     overflow: hidden;
 }
+
 .closeModel {
     position: absolute;
     right: 2%;
@@ -85,6 +97,7 @@ header div {
     background-color: white;
     font-size: 24px;
 }
+
 .orderForm {
     display: flex;
     flex-direction: column;
@@ -93,20 +106,24 @@ header div {
     margin: auto;
     font-family: "Overpass", sans-serif;
 }
+
 .orderForm h2 {
     text-align: center;
     margin: 1% 0;
 }
+
 .orderForm label {
     display: block;
     font-weight: bold;
 }
+
 .orderForm input {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
 }
+
 .orderForm input[type="submit"] {
     background-color: black;
     color: white;
@@ -118,13 +135,16 @@ header div {
     width: 35%;
     margin-left: 32.5%;
 }
+
 .orderForm input[type="submit"]:hover {
     background-color: #333;
 }
+
 input:not([type="submit"]) {
     width: 300px;
     cursor: text;
 }
+
 #validError {
     margin-left: 28%;
     color: red;
@@ -133,6 +153,7 @@ input:not([type="submit"]) {
     background-color: rgba(255, 99, 71, 0.5);
     width: 40%;
 }
+
 #validSuccess {
     margin-left: 16%;
     white-space: pre-line;
@@ -142,6 +163,7 @@ input:not([type="submit"]) {
     width: 65%;
     background-color: rgba(60, 179, 113, 0.5);
 }
+
 .text-danger {
     display: block;
     color: red;
@@ -151,21 +173,26 @@ input:not([type="submit"]) {
 main {
     width: 100%;
 }
+
 .textInMain {
     margin: 0 3%;
     font-weight: bold;
 }
+
 .textInMain p:first-of-type {
     font-size: 15px;
 }
+
 .textInMain p:last-of-type {
     font-size: 25px;
 }
+
 .productsList {
     margin: 0.5% 2%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+
 .productUnit {
     text-align: center;
     margin: 4% 3%;
@@ -173,12 +200,15 @@ main {
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.17);
     border-radius: 10px;
 }
+
 .productUnit * {
     margin: 1% 0;
 }
+
 .productUnit img {
     width: 70%;
 }
+
 .buttonUnit {
     border: none;
     color: white;
@@ -197,14 +227,18 @@ main {
     text-align: center;
     margin: 1% 5%;
 }
-.orderHeader, .orderRow {
+
+.orderHeader,
+.orderRow {
     display: contents;
 }
+
 .orderHeader p {
     font-weight: bold;
     padding: 10px;
     border-bottom: 2px solid #000;
 }
+
 .orderRow p {
     padding: 10px;
     border-bottom: 1px solid #ccc;
@@ -219,6 +253,7 @@ main {
     position: relative;
     overflow: hidden;
 }
+
 .slider img {
     width: 100%;
     height: 100%;
@@ -228,9 +263,11 @@ main {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
+
 .slider img.active {
     opacity: 1;
 }
+
 .slider button {
     width: 40px;
     height: 40px;
@@ -241,9 +278,43 @@ main {
     transform: translateY(-50%);
     z-index: 1;
 }
+
 .slider .prev {
     left: 10px;
 }
+
 .slider .next {
     right: 10px;
+}
+
+/* Меню */
+.list-style {
+    position: absolute;
+    height: auto;
+    width: 500px;
+    margin: 2% 4%;
+    font-size: 20px;
+    color: #777777;
+}
+
+.list-style li {
+    display: inline-block;
+    margin: 0% 5%;
+}
+
+.list-style a {
+    text-decoration: none;
+    color: #777777;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.list-style a:hover {
+    color: #2e2e2e;
+    transition: 1s;
+}
+
+/* Форма фоторграфии */
+.photowork {
+    margin: 6% 3% 0;
 }
