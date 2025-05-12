@@ -7,7 +7,7 @@ app.use(express.static(__dirname));
 
 // Отображение формы
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/test/index.html");
 });
 
 // Обработка данных с формы
