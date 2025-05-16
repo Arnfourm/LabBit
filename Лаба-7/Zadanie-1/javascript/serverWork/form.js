@@ -23,6 +23,7 @@ formPhoto.addEventListener("submit", async (event) => {
 
     const photoImg = document.createElement("img");
     photoImg.src = result.imageUrl;
+    photoImg.style = "width: 50%";
 
     resultBlock.appendChild(photoName);
     resultBlock.appendChild(photoDate);
