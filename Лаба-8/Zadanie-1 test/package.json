@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@luver/zadanie-2": "^1.0.1",
     "zadanie-1": "^1.0.1"
   }
 }

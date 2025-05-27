@@ -1,2 +1,4 @@
 const start = require('zadanie-1');
-console.log(start);
+
+const calc = require('@luver/zadanie-2');
+console.log(calc.operationAdding(2, 3));
