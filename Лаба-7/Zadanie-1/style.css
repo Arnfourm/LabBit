@@ -316,5 +316,23 @@ main {
 
 /* Форма фоторграфии */
 .photowork {
-    margin: 6% 3% 0;
+    margin: 5% 5% 0;
+    font-size: 18px;
+}
+
+.photowork>* {
+    margin: 0.5%;
+}
+
+.photowork input[type="submit"] {
+    padding: 0.5%;
+}
+
+.classInnterHtml {
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.classInnterHtmlImg {
+    width: 20%;
 }

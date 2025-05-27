@@ -16,13 +16,14 @@ formPhoto.addEventListener("submit", async (event) => {
     resultBlock.innerHTML = "";
 
     const photoName = document.createElement("p");
-    photoName.textContent = result.data.photoName;
-
+    photoName.textContent = "Название картинки: " + result.data.photoName;
+    
     const photoDate = document.createElement("p");
-    photoDate.textContent = result.data.photoDate;
+    photoDate.textContent = "Дата фотографии: " + result.data.photoDate;
 
     const photoImg = document.createElement("img");
     photoImg.src = result.imageUrl;
+    photoImg.classList.add("classInnterHtmlImg");
 
     resultBlock.appendChild(photoName);
     resultBlock.appendChild(photoDate);
