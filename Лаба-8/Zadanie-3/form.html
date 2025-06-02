@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Clock Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul class="list-style">
+        <li><a href="/">Main</a></li>
+        <li><a href="#">Form</a></li>
+    </ul>
+
+    <main>
+        <form class="photowork" id="photoWorkForm" method="post" action="/postPhoto">
+            <p>
+                <label for="photoName"> Название фото: </label>
+                <input type="text" name="photoName">
+            </p>
+            <p>
+                <label for="photoDate"> Дата сделанной фото: </label>
+                <input type=date name="photoDate">
+            </p>
+            <p>
+                <label for="photoImg"> Фотография: </label>
+                <input type="file" name="photoImg">
+            </p>
+            <input type="submit" value="Отправить форму">
+        </form>
+
+        <div id="formResultPrint" class="classInnterHtml"></div>
+    </main>
+
+    <script src="./javascript/serverWork/form.js"></script>
+</body>
+
+</html>
